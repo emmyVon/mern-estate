@@ -1,8 +1,10 @@
 import express from 'express'
 const router = express.Router()
 
-import {Register} from '../controllers/UserControl.js'
+import {Google, Login, Register} from '../controllers/UserControl.js'
 
-router.route('/sign-up').post(Register)
+router.post('/sign-up', Register);
+router.post('/sign-in', Login);
+router.post('/google',Google)
 
 export default router
